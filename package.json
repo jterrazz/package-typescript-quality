@@ -5,8 +5,7 @@
     "main": "index.js",
     "files": [
         "index.js",
-        "src",
-        "README.md"
+        "src"
     ],
     "type": "module",
     "scripts": {},
