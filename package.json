@@ -1,8 +1,13 @@
 {
     "name": "@jterrazz/package-typescript-quality",
     "author": "Jean-Baptiste Terrazzoni <jterrazzoni@gmail.com>",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "index.js",
+    "files": [
+        "index.js",
+        "src",
+        "README.md"
+    ],
     "type": "module",
     "scripts": {},
     "dependencies": {
