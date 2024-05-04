@@ -1,0 +1,23 @@
+{
+    "name": "@jterrazz/package-typescript-quality",
+    "author": "Jean-Baptiste Terrazzoni <jterrazzoni@gmail.com>",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {},
+    "dependencies": {
+        "@eslint/js": "^9.1.1",
+        "eslint": "^8.57.0",
+        "eslint-plugin-jest": "^28.3.0",
+        "eslint-plugin-simple-import-sort": "^12.1.0",
+        "eslint-plugin-sonarjs": "^0.25.1",
+        "eslint-plugin-sort-keys-fix": "^1.1.2",
+        "eslint-plugin-unused-imports": "^3.2.0",
+        "prettier": "^3.2.5",
+        "typescript": "^5.4.5",
+        "typescript-eslint": "^7.8.0"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+    }
+}
