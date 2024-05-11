@@ -5,6 +5,7 @@ import sonarjs from 'eslint-plugin-sonarjs';
 import unusedImports from 'eslint-plugin-unused-imports';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortKeysFix from 'eslint-plugin-sort-keys-fix';
+import requireExtensions from 'eslint-plugin-require-extensions';
 
 export default [
     // Configuration for Javascript rules
@@ -24,6 +25,14 @@ export default [
         ...sonarjs.configs.recommended,
         plugins: {
             sonarjs: sonarjs,
+        },
+    },
+
+    // Custom rules for sorting keys in objects
+    {
+        ...requireExtensions.configs.recommended,
+        plugins: {
+            'require-extensions': requireExtensions,
         },
     },
 
