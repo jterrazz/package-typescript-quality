@@ -7,6 +7,11 @@ import sortKeysFix from 'eslint-plugin-sort-keys-fix';
 import fileExtensionInImportTs from 'eslint-plugin-file-extension-in-import-ts';
 
 export default [
+    // Ignore project folders
+    {
+        ignores: ['dist/*'],
+    },
+
     // Configuration for Javascript rules
     js.configs.recommended,
 
