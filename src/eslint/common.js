@@ -1,11 +1,10 @@
 import js from '@eslint/js';
 import ts from 'typescript-eslint';
-import jest from 'eslint-plugin-jest';
 import sonarjs from 'eslint-plugin-sonarjs';
 import unusedImports from 'eslint-plugin-unused-imports';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 import sortKeysFix from 'eslint-plugin-sort-keys-fix';
-import requireExtensions from 'eslint-plugin-require-extensions';
+import fileExtensionInImportTs from 'eslint-plugin-file-extension-in-import-ts';
 
 export default [
     // Configuration for Javascript rules
@@ -13,12 +12,6 @@ export default [
 
     // Configuration for Typescript rules
     ...ts.configs.recommended,
-
-    // Configuration for Jest
-    {
-        files: ['__tests__/**'],
-        ...jest.configs['flat/recommended'],
-    },
 
     // Configuration for SonarJS
     {
@@ -28,11 +21,17 @@ export default [
         },
     },
 
-    // Custom rules for sorting keys in objects
+    // Custom rules that require .js import extension
     {
-        ...requireExtensions.configs.recommended,
+        rules: {
+            'file-extension-in-import-ts/file-extension-in-import-ts': [
+                'error',
+                'always',
+                { extMapping: { '.ts': '.js' } },
+            ],
+        },
         plugins: {
-            'require-extensions': requireExtensions,
+            'file-extension-in-import-ts': fileExtensionInImportTs,
         },
     },
 
