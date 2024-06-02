@@ -32,7 +32,7 @@ export default [
             'file-extension-in-import-ts/file-extension-in-import-ts': [
                 'error',
                 'always',
-                { extMapping: { '.ts': '.js' } },
+                { extMapping: { '.ts': '.js', '.tsx': '.jsx' } },
             ],
         },
         plugins: {
