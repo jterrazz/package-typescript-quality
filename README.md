@@ -1,4 +1,4 @@
-# Package Typescript Quality
+# Package Quality
 
 This package provides ESLint and Prettier configurations for TypeScript projects.
 
@@ -7,7 +7,7 @@ This package provides ESLint and Prettier configurations for TypeScript projects
 Install the package using npm:
 
 ```bash
-npm install package-typescript-quality --save-dev
+npm install @jterrazz/quality --save-dev
 ```
 
 ## Usage
@@ -16,7 +16,7 @@ npm install package-typescript-quality --save-dev
 
 ```javascript
 // eslint.config.js
-import { eslintConfig } from '@jterrazz/package-typescript-quality';
+import { eslintConfig } from '@jterrazz/quality';
 
 export default eslintConfig;
 ```
@@ -25,7 +25,7 @@ export default eslintConfig;
 
 ```javascript
 // prettier.config.js
-import { prettierConfig } from '@jterrazz/package-typescript-quality';
+import { prettierConfig } from '@jterrazz/quality';
 
 export default prettierConfig;
 ```
