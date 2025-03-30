@@ -31,16 +31,14 @@ print_output() {
     local header=$2
     local status=$3
     
-    if [ $status -ne 0 ] || [ -s "$file" ]; then
-        echo -e "\n=== $header ==="
-        if [ -s "$file" ]; then
-            cat "$file"
-        fi
-        if [ $status -ne 0 ]; then
-            echo -e "${RED}✖ Failed with exit code $status${NC}"
-        else
-            echo -e "${GREEN}✓ Passed${NC}"
-        fi
+    echo -e "\n=== $header ==="
+    if [ -s "$file" ]; then
+        cat "$file"
+    fi
+    if [ $status -ne 0 ]; then
+        echo -e "${RED}✖ Failed with exit code $status${NC}"
+    else
+        echo -e "${GREEN}✓ Passed${NC}"
     fi
 }
 
