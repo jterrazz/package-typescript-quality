@@ -1,6 +1,6 @@
 # Package Quality
 
-This package provides ESLint and Prettier configurations for TypeScript projects.
+This package provides ESLint and Prettier configurations for TypeScript projects, along with a convenient quality-check command to run all quality checks in parallel.
 
 ## Installation
 
@@ -30,6 +30,28 @@ import { prettierConfig } from '@jterrazz/quality';
 export default prettierConfig;
 ```
 
-3. You can now use these configurations in your TypeScript project!
+3. Add the following script to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "lint": "quality-check"
+  }
+}
+```
+
+4. You can now run all quality checks in parallel using:
+
+```bash
+npm run lint
+```
+
+This will run:
+
+- TypeScript type checking (`tsc --noEmit`)
+- ESLint code quality checks (`eslint . --ext .ts,.tsx`)
+- Prettier style checks (`prettier . --check`)
+
+All checks run in parallel and provide a clear summary of the results.
 
 Happy linting! 🚀
