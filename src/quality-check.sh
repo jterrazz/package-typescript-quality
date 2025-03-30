@@ -19,7 +19,7 @@ echo -e "${YELLOW}Running all quality checks in parallel...${NC}\n"
 tsc --noEmit > "$tmp_dir/type.log" 2>&1 &
 type_pid=$!
 
-eslint . --ext .ts,.tsx > "$tmp_dir/code.log" 2>&1 &
+eslint . > "$tmp_dir/code.log" 2>&1 &
 code_pid=$!
 
 prettier . --check > "$tmp_dir/style.log" 2>&1 &
